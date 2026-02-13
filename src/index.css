@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20 6% 10%;
+    --foreground: 38 25% 82%;
+
+    --card: 20 6% 13%;
+    --card-foreground: 38 25% 82%;
+
+    --popover: 20 6% 13%;
+    --popover-foreground: 38 25% 82%;
+
+    --primary: 12 80% 57%;
+    --primary-foreground: 20 6% 10%;
+
+    --secondary: 20 6% 16%;
+    --secondary-foreground: 38 25% 82%;
+
+    --muted: 20 6% 18%;
+    --muted-foreground: 38 15% 50%;
+
+    --accent: 12 80% 57%;
+    --accent-foreground: 20 6% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 6% 20%;
+    --input: 20 6% 20%;
+    --ring: 12 80% 57%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 20 6% 8%;
+    --sidebar-foreground: 38 25% 82%;
+    --sidebar-primary: 12 80% 57%;
+    --sidebar-primary-foreground: 20 6% 10%;
+    --sidebar-accent: 20 6% 16%;
+    --sidebar-accent-foreground: 38 25% 82%;
+    --sidebar-border: 20 6% 20%;
+    --sidebar-ring: 12 80% 57%;
+
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 20 6% 10%;
+    --foreground: 38 25% 82%;
+    --card: 20 6% 13%;
+    --card-foreground: 38 25% 82%;
+    --popover: 20 6% 13%;
+    --popover-foreground: 38 25% 82%;
+    --primary: 12 80% 57%;
+    --primary-foreground: 20 6% 10%;
+    --secondary: 20 6% 16%;
+    --secondary-foreground: 38 25% 82%;
+    --muted: 20 6% 18%;
+    --muted-foreground: 38 15% 50%;
+    --accent: 12 80% 57%;
+    --accent-foreground: 20 6% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 20 6% 20%;
+    --input: 20 6% 20%;
+    --ring: 12 80% 57%;
+    --sidebar-background: 20 6% 8%;
+    --sidebar-foreground: 38 25% 82%;
+    --sidebar-primary: 12 80% 57%;
+    --sidebar-primary-foreground: 20 6% 10%;
+    --sidebar-accent: 20 6% 16%;
+    --sidebar-accent-foreground: 38 25% 82%;
+    --sidebar-border: 20 6% 20%;
+    --sidebar-ring: 12 80% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--muted-foreground)));
+  }
+
+  .section-label {
+    @apply text-xs font-body tracking-[0.3em] uppercase text-muted-foreground;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+/* Hide default cursor on interactive elements */
+@media (min-width: 768px) {
+  a, button, [data-cursor-hover], [data-cursor-text] {
+    cursor: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
