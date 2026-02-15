@@ -14,7 +14,7 @@ const SocialSidebar = () => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 1.2 }}
-      className="fixed left-6 md:left-10 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-6"
+      className="fixed left-6 md:left-10 top-1/2 -translate-y-1/2 mt-48 ml-9 z-40 hidden md:flex flex-col gap-8"
     >
       {socials.map((s, i) => (
         <motion.a
@@ -26,7 +26,7 @@ const SocialSidebar = () => {
           className="text-muted-foreground hover:text-primary transition-colors duration-300"
           data-cursor-hover
         >
-          <s.icon size={22} strokeWidth={1.5} />
+          <s.icon size={26} strokeWidth={1.5} />
         </motion.a>
       ))}
     </motion.div>

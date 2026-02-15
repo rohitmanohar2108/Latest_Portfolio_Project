@@ -250,6 +250,7 @@ const SkillRow = ({
       className="opacity-0 relative group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      data-cursor-text="</>"
     >
       {/* Hover background band */}
       <div

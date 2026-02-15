@@ -75,6 +75,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.6, delay: 0.08 * i }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
+              data-cursor-text="</>"
               className="relative group cursor-pointer"
             >
               {/* Hover background */}

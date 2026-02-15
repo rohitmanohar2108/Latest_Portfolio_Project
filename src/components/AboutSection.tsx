@@ -1,8 +1,9 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const AboutSection = () => {
   const ref = useRef<HTMLElement>(null);
+   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-150px" });
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -31,6 +32,7 @@ const AboutSection = () => {
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.3 }}
+        
         className="w-5 h-5 rounded-full bg-primary absolute right-1/4 top-24"
       />
 
@@ -49,6 +51,9 @@ const AboutSection = () => {
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 30 }}
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              data-cursor-text="</>"
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.05 * i, ease: "easeOut" }}
               className={`inline-block mr-[0.3em] ${

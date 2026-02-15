@@ -205,6 +205,7 @@ const SpiralTimeline = () => {
             transition={{ duration: 0.6, delay: 0.1 * index }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
+            data-cursor-text="</>"
             className="relative group cursor-pointer overflow-hidden"
           >
             {/* Coral hover background */}
