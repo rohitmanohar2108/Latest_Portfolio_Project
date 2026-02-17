@@ -26,6 +26,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" ref={ref} className="relative py-32 md:py-48 px-8 md:px-20 lg:px-32">
+      
       {/* Floating coral dot */}
       <motion.div
         style={{ y: dotY }}

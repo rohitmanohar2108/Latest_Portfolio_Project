@@ -76,7 +76,7 @@ const ProjectsSection = () => {
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
               data-cursor-text="</>"
-              className="relative group cursor-pointer"
+              className="relative group cursor-pointer font-display"
             >
               {/* Hover background */}
               <motion.div

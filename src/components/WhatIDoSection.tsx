@@ -96,7 +96,7 @@ const WhatIDoSection = () => {
               <div className="relative flex items-center justify-between px-8 md:px-20 lg:px-52 py-3 md:py-4 border-b border-border/30">
                 <motion.h3
                   animate={{
-                    color: isHovered
+                    color: isHovered 
                       ? "hsl(20, 6%, 10%)"
                       : isAnyHovered
                       ? "hsl(20, 6%, 25%)"

@@ -102,7 +102,7 @@ const MottoSection = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: i * 0.15, duration: 0.6, ease: "easeOut" }}
             >
-              {line.text}
+              {line.text} 
             </motion.h2>
           ))}
 
@@ -120,7 +120,7 @@ const MottoSection = () => {
                   key={i}
                   className="font-display text-[clamp(3rem,10vw,9rem)] leading-[0.9] tracking-tight text-background"
                 >
-                  {line.text}
+                  {line.text} 
                 </h2>
               ))}
             </div>

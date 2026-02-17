@@ -1,6 +1,7 @@
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { useCallback, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
+import TextScramble from "./TextScramble";
 
 const SocialLink = ({ label, href, index }: { label: string; href: string; index: number }) => {
   return (
@@ -29,7 +30,7 @@ const SocialLink = ({ label, href, index }: { label: string; href: string; index
         <motion.span
           className="inline-block transition-colors duration-300 group-hover:text-primary"
         >
-          {label}
+          <TextScramble text={label} trigger="scroll" speed={0.01} />
         </motion.span>
 
         {/* Underline */}
@@ -164,6 +165,15 @@ const Footer = () => {
     { label: "Github", href: "https://github.com/rohitmanohar2108" },
     
   ];
+  const socialLinks3 = [
+    
+    { label: "Linkedin", href: "https://www.linkedin.com/in/rohit-manohar-80b949207/" },
+  ];
+
+  const socialLinks4 = [
+    { label: "Github", href: "https://github.com/rohitmanohar2108" },
+    
+  ];
 
   return (
     <footer id="contact" ref={ref} className="relative py-16 md:py-24 px-6 md:px-16 lg:px-56 overflow-hidden">
@@ -189,6 +199,7 @@ const Footer = () => {
             <SocialLink key={link.label} {...link} index={i} />
           ))}
         </div>
+        
 
         {/* Column 2 */}
         <div className="flex flex-col gap-2 md:gap-3">
@@ -196,6 +207,7 @@ const Footer = () => {
             <SocialLink key={link.label} {...link} index={i + 3} /> 
           ))}
         </div>
+        
 
         {/* Column 3 - Contact */}
         <motion.div

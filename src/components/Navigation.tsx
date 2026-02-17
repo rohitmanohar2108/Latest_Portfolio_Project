@@ -7,7 +7,12 @@ const Navigation = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 900 }}
+        transition={{
+          duration: 0.6,
+          delay: 0.2,
+          type: "spring",
+          stiffness: 900,
+        }}
         className="relative z-50"
         data-cursor-hover
       >
@@ -27,7 +32,14 @@ const Navigation = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="flex flex-col items-end gap-2 text-base font-body tracking-[0.2em] uppercase"
       >
-        {["About", "Work","My Journey", "Tech Stack", "Projects", "Contact"].map((item, i) => (
+        {[
+          "About",
+          "Work",
+          "My Journey",
+          "Tech Stack",
+          "Projects",
+          "Contact",
+        ].map((item, i) => (
           <motion.a
             key={item}
             href={`#${item.toLowerCase()}`}
